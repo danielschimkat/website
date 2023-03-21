@@ -1,0 +1,11 @@
+{
+	"name": "website-portfolio",
+	"private": false,
+	"version": "0.0.1",
+	"discription": "",
+	"scripts": {
+    },
+	"devDependencies": {
+		"sass": "^1.49.9"
+	}
+}

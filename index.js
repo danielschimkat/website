@@ -121,7 +121,7 @@ const observer = new IntersectionObserver((entries) => {
 
 // Observe elements for fade-in animation
 const animateOnScroll = document.querySelectorAll(
-    '.skill-category, .timeline-item, .education-card, .project-card'
+    '.skill-category, .timeline-item, .education-card'
 );
 
 animateOnScroll.forEach(element => {

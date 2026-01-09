@@ -2,19 +2,33 @@
    CSS Variables & Reset
    ==================================== */
 :root {
+    /* Dark mode as default */
+    --bg-primary: #0F172A;
+    --bg-secondary: #1E293B;
+    --text-primary: #F1F5F9;
+    --text-secondary: #94A3B8;
+    --accent-orange: #F97316;
+    --accent-orange-light: #FB923C;
+    --accent-orange-dark: #EA580C;
+    --border-color: #334155;
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6);
+    --transition: all 0.3s ease;
+}
+
+/* Light mode (optional toggle) */
+:root.light-mode {
     --bg-primary: #FFFFFF;
     --bg-secondary: #F8FAFC;
     --text-primary: #1F2937;
     --text-secondary: #6B7280;
-    --accent-orange: #F97316;
-    --accent-orange-light: #FB923C;
-    --accent-orange-dark: #EA580C;
     --border-color: #E5E7EB;
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
     --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-    --transition: all 0.3s ease;
 }
 
 * {
@@ -104,11 +118,15 @@ a {
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: rgba(15, 23, 42, 0.95);
     backdrop-filter: blur(10px);
     box-shadow: var(--shadow-sm);
     z-index: 1000;
     transition: var(--transition);
+}
+
+:root.light-mode .navbar {
+    background-color: rgba(255, 255, 255, 0.95);
 }
 
 .navbar.scrolled {
@@ -174,6 +192,30 @@ a {
     margin: 3px 0;
     transition: var(--transition);
     border-radius: 2px;
+}
+
+.nav-controls {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.control-btn {
+    background-color: var(--bg-secondary);
+    border: 2px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.control-btn:hover {
+    border-color: var(--accent-orange);
+    color: var(--accent-orange);
+    transform: translateY(-2px);
 }
 
 /* ====================================
@@ -423,6 +465,10 @@ a {
     background-color: var(--accent-orange);
     border: 3px solid var(--bg-primary);
     box-shadow: 0 0 0 3px var(--border-color);
+}
+
+:root.light-mode .timeline-marker {
+    border-color: #FFFFFF;
 }
 
 .timeline-date {
@@ -721,9 +767,13 @@ a {
    Footer
    ==================================== */
 .footer {
-    background-color: var(--text-primary);
+    background-color: #020617;
     color: white;
     padding: 2rem 0;
+}
+
+:root.light-mode .footer {
+    background-color: #1F2937;
 }
 
 .footer-content {
@@ -785,6 +835,7 @@ a {
         box-shadow: var(--shadow-lg);
         padding: 2rem 0;
         gap: 0;
+        border-top: 1px solid var(--border-color);
     }
 
     .nav-menu.active {
@@ -793,6 +844,11 @@ a {
 
     .nav-menu li {
         margin: 1rem 0;
+    }
+
+    .nav-controls {
+        justify-content: center;
+        margin-top: 1rem;
     }
 
     .nav-toggle {

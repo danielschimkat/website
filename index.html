@@ -19,12 +19,16 @@
                 <span></span>
             </button>
             <ul class="nav-menu" id="navMenu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#education" class="nav-link">Education</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#home" class="nav-link" data-i18n="nav.home">Home</a></li>
+                <li><a href="#about" class="nav-link" data-i18n="nav.about">About</a></li>
+                <li><a href="#skills" class="nav-link" data-i18n="nav.skills">Skills</a></li>
+                <li><a href="#experience" class="nav-link" data-i18n="nav.experience">Experience</a></li>
+                <li><a href="#education" class="nav-link" data-i18n="nav.education">Education</a></li>
+                <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a></li>
+                <li class="nav-controls">
+                    <button id="themeToggle" class="control-btn" title="Toggle theme">🌙</button>
+                    <button id="langToggle" class="control-btn" title="Switch language">DE</button>
+                </li>
             </ul>
         </div>
     </nav>
@@ -34,15 +38,15 @@
         <div class="container">
             <div class="hero-content">
                 <h1 class="hero-title">
-                    Hi, I'm <span class="highlight">Daniel Schimkat</span>
+                    <span data-i18n="hero.greeting">Hi, I'm</span> <span class="highlight">Daniel Schimkat</span>
                 </h1>
-                <p class="hero-subtitle">Software Quality Assurance Engineer</p>
-                <p class="hero-description">
+                <p class="hero-subtitle" data-i18n="hero.title">Software Quality Assurance Engineer</p>
+                <p class="hero-description" data-i18n="hero.description">
                     Specialized in test automation, API testing, and ensuring software quality through comprehensive testing strategies.
                 </p>
                 <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Get in Touch</a>
-                    <a href="Lebenslauf_Daniel_Schimkat.pdf" class="btn btn-secondary" download>Download CV</a>
+                    <a href="#contact" class="btn btn-primary" data-i18n="hero.contact">Get in Touch</a>
+                    <a href="Lebenslauf_Daniel_Schimkat.pdf" class="btn btn-secondary" download data-i18n="hero.download">Download CV</a>
                 </div>
             </div>
         </div>
@@ -51,21 +55,21 @@
     <!-- About Section -->
     <section id="about" class="section">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <h2 class="section-title" data-i18n="about.title">About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>
+                    <p data-i18n="about.p1">
                         Welcome! I'm a dedicated Software Quality Assurance Engineer with expertise in
                         test automation, API testing, and load testing. Currently working at TIMOCOM,
                         I specialize in ensuring software quality through comprehensive testing strategies.
                     </p>
-                    <p>
+                    <p data-i18n="about.p2">
                         With a Bachelor of Engineering in Electrical and Information Technology (Automation
                         Technology) from Hochschule Düsseldorf, I combine technical knowledge with practical
                         testing experience. I'm ISTQB Certified and have extensive experience with modern
                         testing frameworks and tools.
                     </p>
-                    <p>
+                    <p data-i18n="about.p3">
                         When I'm not testing software, you'll find me jogging, traveling, riding my motorcycle,
                         or working on my HomeLab projects. I also volunteer as a night watch at Haus am Stadtpark,
                         Caritas Neuss, and have a background in community service through the youth fire department
@@ -84,11 +88,11 @@
     <!-- Skills Section -->
     <section id="skills" class="section section-alt">
         <div class="container">
-            <h2 class="section-title">Skills</h2>
+            <h2 class="section-title" data-i18n="skills.title">Skills</h2>
             <div class="skills-grid">
                 <!-- Programming Languages -->
                 <div class="skill-category">
-                    <h3 class="skill-category-title">Programming Languages</h3>
+                    <h3 class="skill-category-title" data-i18n="skills.programming">Programming Languages</h3>
                     <div class="skill-items">
                         <div class="skill-item">
                             <div class="skill-header">
@@ -131,7 +135,7 @@
 
                 <!-- Testing & Development Tools -->
                 <div class="skill-category">
-                    <h3 class="skill-category-title">Testing & Development Tools</h3>
+                    <h3 class="skill-category-title" data-i18n="skills.testing">Testing & Development Tools</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">Playwright</span>
                         <span class="skill-tag">Postman</span>
@@ -146,7 +150,7 @@
 
                 <!-- DevOps & Infrastructure -->
                 <div class="skill-category">
-                    <h3 class="skill-category-title">DevOps & Infrastructure</h3>
+                    <h3 class="skill-category-title" data-i18n="skills.devops">DevOps & Infrastructure</h3>
                     <div class="skill-tags">
                         <span class="skill-tag">Docker</span>
                         <span class="skill-tag">GitLab</span>
@@ -160,11 +164,11 @@
 
                 <!-- Languages -->
                 <div class="skill-category">
-                    <h3 class="skill-category-title">Languages</h3>
+                    <h3 class="skill-category-title" data-i18n="skills.languages">Languages</h3>
                     <div class="skill-items">
                         <div class="skill-item">
                             <div class="skill-header">
-                                <span class="skill-name">German (Native)</span>
+                                <span class="skill-name" data-i18n="skills.german">German (Native)</span>
                                 <span class="skill-level">100%</span>
                             </div>
                             <div class="skill-bar">
@@ -173,7 +177,7 @@
                         </div>
                         <div class="skill-item">
                             <div class="skill-header">
-                                <span class="skill-name">English (B2)</span>
+                                <span class="skill-name" data-i18n="skills.english">English (B2)</span>
                                 <span class="skill-level">80%</span>
                             </div>
                             <div class="skill-bar">
@@ -189,7 +193,7 @@
     <!-- Experience Section -->
     <section id="experience" class="section">
         <div class="container">
-            <h2 class="section-title">Experience</h2>
+            <h2 class="section-title" data-i18n="experience.title">Experience</h2>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
@@ -286,7 +290,7 @@
     <!-- Education Section -->
     <section id="education" class="section section-alt">
         <div class="container">
-            <h2 class="section-title">Education</h2>
+            <h2 class="section-title" data-i18n="education.title">Education</h2>
             <div class="education-grid">
                 <div class="education-card">
                     <div class="education-icon">🎓</div>
@@ -323,11 +327,11 @@
     <!-- Contact Section -->
     <section id="contact" class="section section-alt">
         <div class="container">
-            <h2 class="section-title">Get in Touch</h2>
+            <h2 class="section-title" data-i18n="contact.title">Get in Touch</h2>
             <div class="contact-content">
                 <div class="contact-info">
-                    <h3>Let's Connect</h3>
-                    <p>
+                    <h3 data-i18n="contact.subtitle">Let's Connect</h3>
+                    <p data-i18n="contact.description">
                         I'm always interested in hearing about new opportunities,
                         interesting projects, or just having a chat about technology.
                     </p>
@@ -344,18 +348,18 @@
                 </div>
                 <form class="contact-form" id="contactForm">
                     <div class="form-group">
-                        <label for="name">Name</label>
+                        <label for="name" data-i18n="contact.name">Name</label>
                         <input type="text" id="name" name="name" required>
                     </div>
                     <div class="form-group">
-                        <label for="email">Email</label>
+                        <label for="email" data-i18n="contact.email">Email</label>
                         <input type="email" id="email" name="email" required>
                     </div>
                     <div class="form-group">
-                        <label for="message">Message</label>
+                        <label for="message" data-i18n="contact.message">Message</label>
                         <textarea id="message" name="message" rows="5" required></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <button type="submit" class="btn btn-primary" data-i18n="contact.send">Send Message</button>
                 </form>
             </div>
         </div>
